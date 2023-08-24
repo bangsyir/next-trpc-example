@@ -8,18 +8,38 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@hookform/resolvers": "^3.2.0",
+    "@prisma/client": "^5.1.1",
+    "@trpc/client": "^10.37.1",
+    "@trpc/next": "^10.37.1",
+    "@trpc/server": "^10.37.1",
+    "@types/bcrypt": "^5.0.0",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "bcrypt": "^5.1.1",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.16",
     "next": "13.4.16",
+    "next-auth": "^4.23.1",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.4",
+    "start-server-and-test": "^2.0.0",
+    "superjson": "^1.13.1",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "ts-node": "^10.9.1",
+    "typescript": "5.1.6",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "prisma": "^5.1.1"
   }
 }
