@@ -10,10 +10,10 @@ type Inputs = {
 export default function DashboardPage() {
   const session = useSession();
   const { register, handleSubmit } = useForm<Inputs>();
-  const getTodos = trpc.note.getTodo.useQuery(undefined, {
+  const getTodos = trpc.todo.getTodo.useQuery(undefined, {
     enabled: session.data?.user !== undefined,
   });
-  const create = trpc.note.create.useMutation({
+  const create = trpc.todo.create.useMutation({
     onError(error) {
       console.error(error);
     },
@@ -21,7 +21,7 @@ export default function DashboardPage() {
       getTodos.refetch();
     },
   });
-  const setDone = trpc.note.updateDone.useMutation({
+  const setDone = trpc.todo.updateDone.useMutation({
     onSettled() {
       getTodos.refetch();
     },
