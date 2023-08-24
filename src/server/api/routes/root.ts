@@ -4,7 +4,7 @@ import { userRouter } from "./user";
 
 export const appRouter = createTRPCRouter({
   user: userRouter,
-  note: todoRouter,
+  todo: todoRouter,
 });
 
 export type AppRouter = typeof appRouter;
